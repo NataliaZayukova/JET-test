@@ -12,6 +12,7 @@ public class HomePage {
     public HomePage SendTest() {
         SearchForJobTitle.sendKeys("Test");
         SearchForJobTitle.sendKeys(Keys.RETURN );
+
         return this;
     }
 
