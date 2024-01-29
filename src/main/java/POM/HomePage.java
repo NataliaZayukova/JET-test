@@ -56,6 +56,7 @@ public class HomePage {
     public HomePage ClickCountryAccordion() {
         CountryAccordion.click();
         return this;
+
     }
 
     //Creating checkbox Netherlands
