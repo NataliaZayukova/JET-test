@@ -8,12 +8,14 @@ import org.openqa.selenium.support.How;
 
 import java.util.ArrayList;
 
+
 import static com.codeborne.selenide.Selenide.getFocusedElement;
 
 public class HomePage {
     //creating SearchForJobTitle element
     @FindBy(how = How.NAME, using = "phsKeywords")
     private SelenideElement SearchForJobTitle;
+
 
     //creating method to send text "Test" to Search field
     public HomePage SendTest() {
