@@ -39,16 +39,10 @@ public class HomePage {
 
     //Creating method to check if elements are different
     public boolean checkLocations() {
-        String CheckLocation = Locations.get(0).getText();
-        boolean Result;
-        for (int i = 1; i <= 5; i++) {
-            if (CheckLocation == Locations.get(i).getText())
-                Result = true;
-            else Result = false;
-            if (Result = true) break;
-        }
-        return true;
+            boolean Check = Locations.stream().allMatch(s->s== Locations.get(0));
+            return Check;
     }
+
 
     //creating CountryAccordion element
     @FindBy(how = How.ID, using = "CountryAccordion")
@@ -70,15 +64,21 @@ public class HomePage {
         Checkbox.click();
         return this;
     }
+    //Creating list of locations of found jobs
+    ArrayList<WebElement> Locations2 = new ArrayList<>();
 
-    //Checking that now Location = Netherlands
-    public boolean checkLocationsNetherlands() {
-        String CheckLocation = "Netherlands";
+    public ArrayList<WebElement> getLocations2() {
         for (int i = 1; i <= 5; i++) {
-            if (CheckLocation == Locations.get(i).getText())
-                return true;
+            String xpath = "/html/body/div[2]/div[2]/div/div/div/div[2]/section[4]/div/div/div/div[2]/div[2]/ul/li[" + i + "]/div/p/span[2]/span";
+            WebElement Location = getFocusedElement().findElement(By.xpath(xpath));
+            Locations2.add(Location);
         }
-        return true;
+        return Locations2;
+    }
+    //Checking that now Location = Netherlands
+    public boolean checkLocations2() {
+        boolean Check2 = Locations2.stream().allMatch(s->Locations2.contains("Netherlands"));
+        return Check2;
     }
 }
 
