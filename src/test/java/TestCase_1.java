@@ -1,4 +1,3 @@
-
 import POM.HomePage;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,10 +20,10 @@ public class TestCase_1 {
         assertFalse (homePage.checkLocations());
         homePage.ClickCountryAccordion();
         sleep(5000);
-        homePage.clickCheckBox();
+        homePage.clickCheckBoxNetherlands();
         sleep(10000);
         homePage.getLocations();
-       assertTrue(homePage.checkLocations2());
+       assertTrue(homePage.checkLocationsNetherlands());
     }
 }
 
