@@ -21,7 +21,7 @@ public class TestCase_1 {
     public void TestCase1() {
         //Step 2. Search for the Job Title “Test”
         homePageTestCase1.SendTest();
-        sleep(10000);
+        sleep(5000);
         //Step 3. Verify that the search contains results from multiple locations
         homePageTestCase1.getLocations();
         assertFalse(homePageTestCase1.checkLocations());
@@ -29,7 +29,7 @@ public class TestCase_1 {
         homePageTestCase1.ClickCountryAccordion();
         sleep(5000);
         homePageTestCase1.clickCheckBoxNetherlands();
-        sleep(10000);
+        sleep(5000);
         //Step 5. Verify that now the search results’ location is the Netherlands only
         homePageTestCase1.getLocations();
         assertTrue(homePageTestCase1.checkLocationsNetherlands());
