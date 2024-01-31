@@ -1,5 +1,4 @@
 # JET-test
-# JET-test
 This project contains two Automated Test Cases.
 For this Project I used Maven 3.9.6, Selenide version 7.0.5, junit 4.13.2.
 
