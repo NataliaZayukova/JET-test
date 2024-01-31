@@ -9,6 +9,7 @@ Test Case 1
 ● Verify that the search contains results from multiple locations
 ● Then Refine your search from the left panel to the Country “Netherlands”
 ● Verify that now the search results’ location is the Netherlands only
+
 Test Case 2
 ● Open https://careers.justeattakeaway.com/global/en/home
 ● Click on “Search for Job Title” and select “Sales” among Job Categories
