@@ -19,7 +19,7 @@ public class TestCase_1 {
 
     @Test
     public void TestCase1() {
-       //Step 2. Search for the Job Title “Test”
+        //Step 2. Search for the Job Title “Test”
         homePageTestCase1.SendTest();
         sleep(10000);
         //Step 3. Verify that the search contains results from multiple locations
@@ -30,7 +30,7 @@ public class TestCase_1 {
         sleep(5000);
         homePageTestCase1.clickCheckBoxNetherlands();
         sleep(10000);
-        //Verify that now the search results’ location is the Netherlands only
+        //Step 5. Verify that now the search results’ location is the Netherlands only
         homePageTestCase1.getLocations();
         assertTrue(homePageTestCase1.checkLocationsNetherlands());
     }
