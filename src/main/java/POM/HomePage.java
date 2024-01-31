@@ -143,7 +143,22 @@ public SelenideElement Germanyfilter;
     {NumberGermanyJobsInFilter.equals(NumberJobsInResult);
         return true;
     }
+    //Creating list of locations of found jobs matching "Sales" and "Germany" request
+    ArrayList<WebElement> Locations3 = new ArrayList<>();
 
+    public ArrayList<WebElement> getLocations3() {
+        for (int i = 1; i <= 10; i++) {
+            String xpath = "/html/body/div[2]/div[2]/div/div/div/div[2]/section/div/div/div/div[2]/div[2]/ul/li[" + i + "]/div[1]/p/span[3]/span";
+            WebElement Location = getFocusedElement().findElement(By.xpath(xpath));
+            Locations3.add(Location);
+        }
+        return Locations3;
+    }
+// creating method to verify that there is "Sales" on all results
+public boolean checkSalesInAllResults() {
+    boolean Check3 = Locations3.stream().allMatch(s -> Locations3.equals("Sales"));
+    return Check3;
+}
 }
 
 

@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class TestCase_2 {
@@ -29,5 +28,7 @@ homePageTestCase2.ClickCountryAccordion();
         sleep(10000);
 homePageTestCase2.ClickOnGermanyFilter();
 assertTrue(homePageTestCase2.CompareNumbersOfGermanyJobs());
+        sleep(3000);
+        assertTrue(homePageTestCase2.checkSalesInAllResults());
     }
 }
